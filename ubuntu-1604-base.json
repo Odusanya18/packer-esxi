@@ -13,7 +13,7 @@
 
     "ssh_username": "nullgrid",
     "ssh_password": "nullgrid",
-    "ssh_timeout": "45m",
+    "ssh_timeout": "2h",
 
     "disk_type_id": "thin",
 
