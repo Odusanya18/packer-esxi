@@ -7,8 +7,8 @@
     "tools_upload_flavor": "linux",
     "headless": false,
 
-    "iso_url": "http://releases.ubuntu.com/trusty/ubuntu-14.04.4-server-amd64.iso",
-    "iso_checksum": "07e4bb5569814eab41fafac882ba127893e3ff0bdb7ec931c9b2d040e3e94e7a",
+    "iso_url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-amd64.iso",
+    "iso_checksum": "b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
     "iso_checksum_type": "sha256",
 
     "ssh_username": "nullgrid",
@@ -40,6 +40,7 @@
     "remote_datastore": "{{user `esxi_datastore`}}",
     "remote_username": "{{user `esxi_username`}}",
     "remote_password": "{{user `esxi_password`}}",
+    "vnc_disable_password": true,
     "keep_registered": true,
 
     "vmx_data": {

@@ -1,0 +1,6 @@
+{
+  "esxi_host": "vsphere-host",
+  "esxi_datastore": "vsphere-datastore",
+  "esxi_username": "vsphere-user",
+  "esxi_password": "vsphere-pass"
+}
