@@ -17,5 +17,5 @@ images=(
 
 for i in "${images[@]}" ; do docker pull "${i}" ; done
 
-## Save release version, so that we can call `kubeadm init --use-kubernetes-version="$(cat /etc/kubernetes_ami_version)` and ensure we get the same version
+## Save release version, so that we can call `kubeadm init --kubernetes-version="$(cat /etc/kubernetes_ami_version)` and ensure we get the same version
 echo "${kubernetes_release_tag}" > /etc/kubernetes_ami_version
