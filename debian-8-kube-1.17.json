@@ -7,6 +7,7 @@
       "output_directory": "debian-8-kube-1.17",
       "tools_upload_flavor": "linux",
       "headless": true,
+      "cpus": 4,
   
       "iso_url": "https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/debian-8.10.0-amd64-netinst.iso",
       "iso_checksum": "896cc42998edf65f1db4eba83581941fb2a584f2214976432b841af96b17ccda",

@@ -4,6 +4,14 @@
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/root/bin
 export DEBIAN_FRONTEND=noninteractive
 
+# Turn off swap and comment swap in fstab
+swapoff -a
+sed -i '/swap/s/^/#/g' /etc/fstab
+
+# Enable cgroup memory
+echo "GRUB_CMDLINE_LINUX=\"cgroup_enable=memory\"" >> /etc/default/grub
+update-grub2
+
 # Set iptables and persist
 apt-get install iptables-persistent -qy
 iptables -F

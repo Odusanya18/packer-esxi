@@ -6,6 +6,7 @@
     "guest_os_type": "ubuntu-64",
     "tools_upload_flavor": "linux",
     "headless": false,
+    "cpus": 4,
 
     "iso_url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.6-server-amd64.iso",
     "iso_checksum": "b17d7c1e9d0321ad5810ba77b69aef43f0f29a5422b08120e6ee0576c4527c0e",
