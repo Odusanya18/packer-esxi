@@ -1,7 +1,7 @@
 #!/bin/sh
 
 kubernetes_release_tag="v1.17.0"
-flannel_release_tag="v0.11.0-arm64"
+flannel_release_tag="v0.11.0-amd64"
 
 ## Pre-fetch Kubernetes release image, so that `kubeadm init` is a bit quicker
 images=(
