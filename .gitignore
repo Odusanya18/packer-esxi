@@ -1,3 +1,4 @@
 /packer_cache/
 variables.json
 /debian-8-base/
+/debian-8-kube-1.17/
