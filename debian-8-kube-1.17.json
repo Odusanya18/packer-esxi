@@ -52,7 +52,8 @@
         "type": "shell",
         "scripts": [
           "scripts/open-vm-tools.sh",
-          "scripts/kubernetes-tools.sh"
+          "scripts/kubernetes-tools.sh",
+          "scripts/kubernetes-images.sh"
         ],
   
         "execute_command": "echo 'nullgrid' | {{ .Vars }} sudo -E -S bash '{{ .Path }}'"
