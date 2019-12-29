@@ -9,8 +9,15 @@ apt-get install apt-transport-https ca-certificates curl gnupg2 software-propert
 mkdir -p /etc/docker
 cat > /etc/docker/daemon.json <<EOF
 {
+  "mtu":1450,
+  "ip-masq":true,
   "exec-opts": ["native.cgroupdriver=systemd"],
-  "insecure-registries" : [ "10.0.0.0/8" ]
+  "insecure-registries" : [ "10.0.0.0/8" ],
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m"
+  },
+  "storage-driver": "overlay2"
 }
 EOF
 sysctl net.bridge.bridge-nf-call-iptables=1
