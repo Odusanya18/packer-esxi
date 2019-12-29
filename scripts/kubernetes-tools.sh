@@ -27,4 +27,4 @@ EOF
 apt-get update
 apt install docker-ce=18.06.3~ce~3-0~debian kubelet=1.17.0-00 kubeadm=1.17.0-00 kubectl=1.17.0-00 -qy
 apt-mark hold kubelet kubeadm kubectl docker-ce
-systemctl enable kubelet && systemctl enable docker && systemctl start kubelet
+systemctl enable kubelet && systemctl enable docker
