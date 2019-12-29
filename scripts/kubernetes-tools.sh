@@ -9,7 +9,8 @@ apt-get install apt-transport-https ca-certificates curl gnupg2 software-propert
 mkdir -p /etc/docker
 cat > /etc/docker/daemon.json <<EOF
 {
-  "exec-opts": ["native.cgroupdriver=systemd"]
+  "exec-opts": ["native.cgroupdriver=systemd"],
+  "insecure-registries" : [ "10.0.0.0/8" ]
 }
 EOF
 sysctl net.bridge.bridge-nf-call-iptables=1
@@ -26,4 +27,4 @@ EOF
 apt-get update
 apt install docker-ce=18.06.3~ce~3-0~debian kubelet=1.17.0-00 kubeadm=1.17.0-00 kubectl=1.17.0-00 -qy
 apt-mark hold kubelet kubeadm kubectl docker-ce
-systemctl enable kubelet && systemctl enable docker && && systemctl start kubelet
+systemctl enable kubelet && systemctl enable docker && systemctl start kubelet
